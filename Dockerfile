@@ -16,9 +16,10 @@ RUN composer dump-autoload --no-dev --optimize --no-scripts
 FROM php:8.4-apache AS runtime
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        libicu-dev libzip-dev libpng-dev libjpeg62-turbo-dev libfreetype6-dev libonig-dev curl \
+        libicu-dev libzip-dev libpng-dev libjpeg62-turbo-dev libfreetype6-dev libonig-dev \
+        libpq-dev libsqlite3-dev curl \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j"$(nproc)" pdo_mysql mbstring bcmath exif pcntl gd zip intl \
+    && docker-php-ext-install -j"$(nproc)" pdo_mysql pdo_pgsql pdo_sqlite mbstring bcmath exif pcntl gd zip intl \
     && a2enmod rewrite \
     && rm -rf /var/lib/apt/lists/*
 

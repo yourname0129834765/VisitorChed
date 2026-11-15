@@ -1,6 +1,6 @@
 
 /* ==========================================
-   CLINIC PATIENT RECORDS SYSTEM
+   VISITORCHED VISITOR MANAGEMENT SYSTEM
    Shared stylesheet
    ========================================== */
 
@@ -323,7 +323,7 @@ td a:hover {
 }
 
 /* ==========================================
-   PATIENT ACTION BUTTONS
+   VISITOR ACTION BUTTONS
    ========================================== */
 
 .actions {
@@ -499,7 +499,6 @@ td a:hover {
    ========================================== */
 
 .form-card,
-.patient-form,
 .content-card {
     width: 100%;
     max-width: 700px;
@@ -665,7 +664,7 @@ footer {
 
 
 /* ==========================================
-   SHARED PATIENT FORMS AND DETAIL PAGES
+   SHARED VISITOR FORMS AND DETAIL PAGES
    ========================================== */
 .narrow {
     max-width: 820px;

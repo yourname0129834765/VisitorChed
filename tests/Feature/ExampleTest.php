@@ -9,11 +9,12 @@ class ExampleTest extends TestCase
 {
     use LazilyRefreshDatabase;
 
-    public function test_root_renders_the_patient_list(): void
+    public function test_root_renders_the_visitor_list(): void
     {
         $response = $this->get('/');
 
         $response->assertOk();
-        $response->assertSee('Patient Records');
+        $response->assertSee('VisitorCHED - Visitor Management System');
+        $response->assertSee('Visitor Records');
     }
 }
